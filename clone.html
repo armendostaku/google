@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+</head>
+<style type="text/css">
+	.center{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+	}
+	.resize{
+		height: 40%;
+		width: 40%;
+
+	}
+	.input-rounded{
+		border-radius: 1rem;
+	}
+</style>
+<script type="text/javascript">
+	function search(ele){
+		if (event.key == 'Enter') {
+			location.href = "https://www.google.com/search?q="+ele.value;
+		}
+	}
+	function searchbtn(){
+		var search = document.getElementById("search");
+		location.href = "https://www.google.com/search?q="+search.value;
+	}
+	function searchlucky(){
+		location.href = "https://google.com/doodles";
+	}
+</script>
+<body>
+<img class="center resize" src="googlelogo.gif">
+<input class="input-rounded center form-control" id="search" type="text" placeholder="Search Google or type a URL" onkeydown="search(this)"/>
+<br>
+<div class="text-center">
+<button class="btn btn-light" onclick="searchbtn()">Google Search</button>
+<button class="btn btn-light" onclick="searchlucky()">I'm Feeling Lucky</button>
+</div>
+</body>
+</html>
